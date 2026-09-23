@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DeterminateSystems/nix-installer-action@v16
+
+      - name: Build packages
+        run: nix build .#ibkr-desktop .#ibkr-desktop-install .#tws .#tws-install --no-link --print-out-paths
+
+      - name: Flake check
+        run: nix flake check
