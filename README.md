@@ -25,7 +25,7 @@ without any rebuilds.
 
 ```nix
 # flake.nix
-inputs.ibkr-nix.url = "github:YOURUSER/ibkr-nix";
+inputs.ibkr-nix.url = "github:brandondtb/ibkr-nix";
 ```
 
 ```nix
@@ -42,8 +42,8 @@ programs.ibkr = {
 ### Ad hoc
 
 ```console
-$ nix run github:YOURUSER/ibkr-nix#ibkr-desktop-install   # first time: install the app
-$ nix run github:YOURUSER/ibkr-nix                         # then: launch it
+$ nix run github:brandondtb/ibkr-nix#ibkr-desktop-install   # first time: install the app
+$ nix run github:brandondtb/ibkr-nix                         # then: launch it
 ```
 
 ## First run and updates
